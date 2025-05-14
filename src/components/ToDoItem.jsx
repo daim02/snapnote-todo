@@ -41,4 +41,4 @@ const styles = {
   };
   
 
-export default TodoItem;
+export default ToDoItem;
