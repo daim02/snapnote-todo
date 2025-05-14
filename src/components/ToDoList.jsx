@@ -41,7 +41,7 @@ function ToDoList({ todos, setTodos, setRecycleBin, onDelete, onSave, userId }) 
       ) : (
         <ul style={styles.list}>
           {todos.map(task => (
-            <TodoItem
+            <ToDoItem
               key={task.id}
               task={task}
               onToggle={() => handleToggleDone(task.id)}
