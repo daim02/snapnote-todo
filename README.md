@@ -1,12 +1,83 @@
-# React + Vite
+# 📝 Snapnote – Simple To-Do List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Snapnote is a sleek, lightweight to-do list application built with **React**, **Vite**, and **Supabase**. It features user authentication, task management, soft-deletion with a recycle bin, and a smooth UI experience.
 
-Currently, two official plugins are available:
+![App Screenshot](public/screenshot.png) <!-- Add your own screenshot if desired -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ User authentication (sign up, log in, log out)
+- ✅ Add, edit, and delete tasks
+- ✅ Recycle Bin with restore functionality
+- ✅ Supabase integration for real-time data storage
+- ✅ Clean, responsive UI with confetti 🎉 on task completion
+
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Supabase](https://supabase.com/)
+- [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/daim02/snapnote-todo.git
+cd snapnote-todo
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+---
+
+## 🔐 Supabase Setup
+
+1. Go to https://app.supabase.com and create a new project.
+2. Go to Table Editor and create a table called todos with these fields:
+
+| Field     | Type    | Description                  |
+|-----------|---------|------------------------------|
+| id        | UUID    | Primary key, auto-generated  |
+| title     | Text    | Task title                   |
+| done      | Boolean | Whether the task is done     |
+| deleted   | Boolean | Soft-delete flag             |
+| user_id   | UUID    | References `auth.users`      |
+
+3. Enable Row Level Security (RLS) on ```todos``` and add this policy:
+```bash
+CREATE POLICY "Users can manage own todos"
+ON todos
+FOR ALL
+USING (auth.uid() = user_id);
+```
+
+4. Go to Settings → API and copy:
+- Your Project URL
+- Your anon public key
+
+---
+
+## 🔑 Environment Variables
+
+Create a .env file in the root of the project:
+```bash
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key-here
+```
+
+## 🧪 Run Locally
+
+```bash
+npm run dev
+```
