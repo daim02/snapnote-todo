@@ -209,7 +209,7 @@ const styles = {
   },
   authButton: {
     padding: '0.5rem 1rem',
-    backgroundColor: '#4f46e5',
+    backgroundColor: '#6a6a6a',
     color: '#fff',
     border: 'none',
     borderRadius: '4px',
@@ -219,7 +219,7 @@ const styles = {
   toggleButton: {
     background: 'none',
     border: 'none',
-    color: '#4f46e5',
+    color: '#6a6a6a',
     textDecoration: 'underline',
     cursor: 'pointer',
     fontSize: '0.9rem',
