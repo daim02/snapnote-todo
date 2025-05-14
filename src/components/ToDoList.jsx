@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ToDoItem from './ToDoItem';
 
-function TodoList({ todos, setTodos, setRecycleBin, onDelete, onSave, userId }) {
+function ToDoList({ todos, setTodos, setRecycleBin, onDelete, onSave, userId }) {
   const [newTask, setNewTask] = useState('');
 
   const handleAdd = async () => {
