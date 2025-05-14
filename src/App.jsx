@@ -132,7 +132,7 @@ function App() {
         <>
           <div style={styles.main}>
             {!showRecycleBin ? (
-              <TodoList
+              <ToDoList
                 todos={todos}
                 setTodos={setTodos}
                 setRecycleBin={setRecycleBin}
