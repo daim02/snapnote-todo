@@ -1,6 +1,6 @@
 import confetti from 'canvas-confetti';
 
-function TodoItem({ task, onToggle, onDelete }) {
+function ToDoItem({ task, onToggle, onDelete }) {
   const handleToggle = () => {
     if (!task.done) {
       confetti({
