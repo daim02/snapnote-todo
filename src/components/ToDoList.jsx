@@ -116,4 +116,4 @@ const styles = {
   },
 };
 
-export default TodoList;
+export default ToDoList;
