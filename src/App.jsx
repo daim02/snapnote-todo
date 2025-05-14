@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from './SupabaseClient';
-import TodoList from './components/TodoList';
+import ToDoList from './components/ToDoList';
 import RecycleBin from './components/RecycleBin';
 import logo from './assets/snapnote-logo.png'; // 👈 Logo import
 
