@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { supabase } from './SupabaseClient';
 import ToDoList from './components/ToDoList';
 import RecycleBin from './components/RecycleBin';
-import logo from './assets/snapnote-logo.png'; // 👈 Logo import
+import logo from './assets/snapnote-logo.png';
 
 function App() {
   const [user, setUser] = useState(null);
