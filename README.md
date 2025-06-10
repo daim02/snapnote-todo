@@ -1,6 +1,6 @@
 # 📝 Snapnote – Simple To-Do List App
 
-Snapnote is a sleek, lightweight to-do list application built with React, Vite, and Supabase. It features user authentication, task management, soft-deletion with a recycle bin, and a smooth UI experience.
+Snapnote is a sleek, lightweight to-do list application built with React, Vite, and Supabase. It features user authentication, task management, soft-deletion with a recycle bin, and a smooth UI experience. Hosted on Vercel: https://snapnote-todo.vercel.app/
 
 ![App Screenshot](public/screenshot.png) <!-- Add your own screenshot if desired -->
 
